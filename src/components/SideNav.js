@@ -1,9 +1,8 @@
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
-import {GiBrainstorm} from 'react-icons/gi'
-import { BsArrowLeftShort, BsSearch, BsChevronDown, BsFillImageFill, BsReverseLayoutTextSidebarReverse, BsPerson } from 'react-icons/bs'
+import { BsArrowLeftShort, BsSearch, BsChevronDown, BsFillImageFill, BsReverseLayoutTextSidebarReverse, BsPerson, BsRocketTakeoff, BsGlobe } from 'react-icons/bs'
 import { AiOutlineFileText, AiOutlineBarChart, AiOutlineMail, AiOutlineSetting, AiOutlineLogout } from 'react-icons/ai'
-import {RiDashboardFill} from 'react-icons/ri'
+import { RiDashboardFill } from 'react-icons/ri'
 
 const SideNav = () => {
     const [open, setOpen] = useState(true)
@@ -11,6 +10,7 @@ const SideNav = () => {
   
     const Menus = [
       {title: "Dashboard" },
+      {title: "Aviator", icon: <BsRocketTakeoff/>},
       {title: "Pages", icon: <AiOutlineFileText/>},
       {title: "Media", spacing: true, icon: <BsFillImageFill/> },
       {title: "Projects",
@@ -23,7 +23,7 @@ const SideNav = () => {
         ],
       },
       { title: "Analytics", icon: <AiOutlineBarChart/> },
-      { title: "Inbex", icon: <AiOutlineMail/> },
+      { title: "Communication", icon: <AiOutlineMail/> },
       { title: "Profile", spacing: true, icon: <BsPerson/> },
       { title: "Setting", icon: <AiOutlineSetting/> },
       { title: "Logout", icon: <AiOutlineLogout/> },
@@ -32,7 +32,7 @@ const SideNav = () => {
         <div className={`bg-dark-purple h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
         <BsArrowLeftShort className={`bg-white text-dark-purple text-3xl rounded-full absolute -right-3 top-9 border border-dark-purple cursor-pointer ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}/>
          <div className="inline-flex">
-         <Link to="/"><GiBrainstorm className={`bg-gold text-4xl rounded cursor-pointer block float-left mr-2 duration-500 ${open && "rotate-[360deg]"}`}/></Link>
+         <Link to="/"><BsGlobe className={`text-4xl text-white rounded cursor-pointer block float-left mr-2 duration-500 ${open && "rotate-[360deg]"}`}/></Link>
          <h1 className={`text-white origin-left font-medium text-2xl duration-300 ${!open && "scale-0"}`}>Innovate KM</h1>
          </div>
  
