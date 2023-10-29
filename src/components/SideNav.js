@@ -9,11 +9,12 @@ const SideNav = () => {
     const [submenuOpen, setSubmenuOpen] = useState(false)
   
     const Menus = [
-      {title: "Dashboard" },
-      {title: "Aviator", icon: <BsRocketTakeoff/>},
-      {title: "Pages", icon: <AiOutlineFileText/>},
-      {title: "Media", spacing: true, icon: <BsFillImageFill/> },
+      {title: "Dashboard", link:"/dashboard"},
+      {title: "Aviator", link:"/aviator", icon: <BsRocketTakeoff/>},
+      {title: "Pages", link:"/pages", icon: <AiOutlineFileText/>},
+      {title: "Media", link:"/media", spacing: true, icon: <BsFillImageFill/> },
       {title: "Projects",
+        link:"/link",
         icon: <BsReverseLayoutTextSidebarReverse/>,
         submenu: true,
         submenuItems: [
@@ -22,11 +23,11 @@ const SideNav = () => {
           { title: "Submenu 3"},
         ],
       },
-      { title: "Analytics", icon: <AiOutlineBarChart/> },
-      { title: "Communication", icon: <AiOutlineMail/> },
-      { title: "Profile", spacing: true, icon: <BsPerson/> },
-      { title: "Setting", icon: <AiOutlineSetting/> },
-      { title: "Logout", icon: <AiOutlineLogout/> },
+      { title: "Analytics", link:"/analytics", icon: <AiOutlineBarChart/> },
+      { title: "Communication", link:"/communications", icon: <AiOutlineMail/> },
+      { title: "Profile", link:"/profile", spacing: true, icon: <BsPerson/> },
+      { title: "Setting", link:"/settings", icon: <AiOutlineSetting/> },
+      { title: "Logout", link:"/logout", icon: <AiOutlineLogout/> },
     ]
     return (
         <div className={`bg-dark-purple h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
@@ -45,7 +46,7 @@ const SideNav = () => {
          <ul className='pt-2'>
            {Menus.map((menu, index) => (
              <>
-              <Link to="/dashboard">            
+              <Link to={menu.link}>            
                <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 hover:bg-light-white rounded-md p-2 ${menu.spacing ? "mt-9" : "mt-2"}`}>
                  <span className='text-2xl block float-left'>
                    {menu.icon ? menu.icon : <RiDashboardFill/>}
