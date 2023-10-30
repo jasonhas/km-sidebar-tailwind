@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Adding a cabana to a reservation",
+        "internal": "<h1>Yeah, you are adding a cabana",
+        "external": "<ul><li>one</li><li>Two</li>"
+    },
+    {
+        "id": 1,
+        "name": "Adding a golf lesson",
+        "internal": "<h1>It's important to see if members have clubs",
+        "external": "This is what it looks like on the outside"
+    }
+]

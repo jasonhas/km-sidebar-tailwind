@@ -59,7 +59,7 @@ const cities = [
 const Analytics = () => {
 
     return (
-        <main className="p-12">
+        <main className="p-12 flex-auto">
         <h2 className="text-2xl font-1emibold">Analytics</h2>
         <Text className="py-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text>
         <Grid numItems={4} numItemsSm={1} numItemsLg={2} className="gap-2">

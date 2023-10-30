@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { BsArrowLeftShort, BsSearch, BsChevronDown, BsFillImageFill, BsReverseLayoutTextSidebarReverse, BsPerson, BsRocketTakeoff, BsGlobe } from 'react-icons/bs'
 import { AiOutlineFileText, AiOutlineBarChart, AiOutlineMail, AiOutlineSetting, AiOutlineLogout } from 'react-icons/ai'
 import { RiDashboardFill } from 'react-icons/ri'
+import { IoDocumentsOutline } from 'react-icons/io5'
 
 const SideNav = () => {
     const [open, setOpen] = useState(true)
@@ -12,6 +13,7 @@ const SideNav = () => {
       {title: "Dashboard", link:"/dashboard"},
       {title: "Aviator", link:"/aviator", icon: <BsRocketTakeoff/>},
       {title: "Pages", link:"/pages", icon: <AiOutlineFileText/>},
+      {title: "Documents", link:"/documents", icon: <IoDocumentsOutline/>},
       {title: "Media", link:"/media", spacing: true, icon: <BsFillImageFill/> },
       {title: "Projects",
         link:"/link",
